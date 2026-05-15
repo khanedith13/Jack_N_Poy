@@ -10,22 +10,15 @@ let userHistory = {
 
 function getComputerChoice(userChoice) {
     const choices = ["rock", "paper", "scissor"];
-
-    // check last user move
     const lastMove = userHistory.lastMove;
-
-    // detect repeat
     const isRepeat = lastMove === userChoice;
 
-    // update last move
     userHistory.lastMove = userChoice;
 
-    // 🎲 RULE: always random if repeat OR "unpredictable behavior"
     if (isRepeat || userHistory[userChoice] >= 2) {
         return choices[Math.floor(Math.random() * 3)];
     }
 
-    // otherwise still random (as per your request = ALWAYS random overall)
     return choices[Math.floor(Math.random() * 3)];
 }
 
@@ -33,7 +26,7 @@ function play(userChoice) {
     userHistory[userChoice]++;
 
     const computerChoice = getComputerChoice();
-
+    
     const resultDiv = document.getElementById("result");
     const userEl = document.getElementById("user_choice");
     const compEl = document.getElementById("computer_choice");
@@ -41,7 +34,6 @@ function play(userChoice) {
     userEl.textContent = emoji(userChoice);
     compEl.textContent = emoji(computerChoice);
 
-    // animation reset
     userEl.classList.remove("choice-animate");
     compEl.classList.remove("choice-animate");
     void userEl.offsetWidth;
@@ -102,7 +94,7 @@ function resetGame() {
 function emoji(choice) {
     switch (choice) {
         case "rock": return "👊";
-        case "paper": return "🫱";
+        case "paper": return "🖐️";
         case "scissor": return "✌️";
         default: return "❔";
     }

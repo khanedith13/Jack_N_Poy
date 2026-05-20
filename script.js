@@ -26,7 +26,7 @@ function play(userChoice) {
     userHistory[userChoice]++;
 
     const computerChoice = getComputerChoice();
-    
+
     const resultDiv = document.getElementById("result");
     const userEl = document.getElementById("user_choice");
     const compEl = document.getElementById("computer_choice");

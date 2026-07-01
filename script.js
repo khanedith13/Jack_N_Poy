@@ -104,6 +104,36 @@ function play(userChoice) {
         `${currentRound}/${maxRounds}`;
 }
 
+function nextRound(){
+
+    currentRound = 1;
+
+    userScore = 0;
+    computerScore = 0;
+
+    userHistory = {
+        rock:0,
+        paper:0,
+        scissor:0
+    };
+
+    document.getElementById("user-score").textContent = 0;
+    document.getElementById("computer-score").textContent = 0;
+
+    document.getElementById("game-number").textContent = "1/5";
+
+    document.getElementById("computer_choice").textContent = "❔";
+    document.getElementById("user_choice").textContent = "❔";
+
+    document.getElementById("result").textContent = "Make your move!";
+
+    document.querySelectorAll(".choice-btn").forEach(btn=>{
+        btn.disabled = false;
+    });
+
+    document.getElementById("next-round-btn").disabled = true;
+}
+
 function resetGame() {
     userScore = 0;
     computerScore = 0;

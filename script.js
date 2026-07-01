@@ -1,6 +1,7 @@
 let userScore = 0;
 let computerScore = 0;
-let gameNumber = 0;
+let currentRound = 1;
+const maxRounds = 5;
 
 let userHistory = {
     rock: 0,

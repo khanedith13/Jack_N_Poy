@@ -194,3 +194,17 @@ body {
         font-size: 0.8rem;
     }
 }
+
+#next-round-btn{
+    border-radius:12px;
+    transition:.25s;
+}
+
+#next-round-btn:hover:not(:disabled){
+    transform:scale(1.03);
+}
+
+#next-round-btn:disabled{
+    opacity:.55;
+    cursor:not-allowed;
+}

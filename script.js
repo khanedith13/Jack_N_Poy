@@ -167,7 +167,7 @@ function resetGame(){
 function emoji(choice) {
     switch (choice) {
         case "rock": return "👊";
-        case "paper": return "🖐️";
+        case "paper": return "✋";
         case "scissor": return "✌️";
         default: return "❔";
     }
